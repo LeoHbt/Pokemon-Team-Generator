@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+* {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "Tiny5", sans-serif;
+    padding: 0.5em 0;
+}
+
+.pokemonTeam {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(2, 110px);
+    gap: 30px;
+    box-shadow:
+        0 0 0 1px #dd9145,
+        0 0 0 4px #FBB979;
+    background-color: #F4FECC;
+    width: fit-content;
+    padding: 3em;
+}
+.pokemonTeam div {
+    background-color: #DBEBA2;
+    box-shadow: 
+        0 0 0 1px black,
+        0 0 0 4px #695A91;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.pokemonTeam div img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
