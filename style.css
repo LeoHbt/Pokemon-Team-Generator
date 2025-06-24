@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+#generatorAndButton {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
+}
+
 h1 {
     text-align: center;
     font-size: 2.5em;
@@ -17,17 +24,19 @@ h1 {
     grid-template-rows: repeat(2, 110px);
     gap: 30px;
     box-shadow:
-        0 0 0 1px #dd9145,
-        0 0 0 4px #FBB979;
+        0 0 0 2px #dd9145,
+        0 0 0 5px #FBB979;
     background-color: #F4FECC;
     width: fit-content;
-    padding: 3em;
+    padding: 0.9em;
+    margin: 1em;
 }
+
 .pokemonTeam div {
     background-color: #DBEBA2;
     box-shadow: 
-        0 0 0 1px black,
-        0 0 0 4px #695A91;
+        0 0 0 2px black,
+        0 0 0 6px #695A91;
     box-sizing: border-box;
     position: relative;
 }
@@ -37,4 +46,55 @@ h1 {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+}
+
+#generateTeam {
+    box-sizing: border-box;
+    width: 95%;
+    padding: 20px 2.5%;
+    justify-content: center;
+    border: none;
+    color: white;
+    font-family: "Tiny5", sans-serif;
+    font-size: 1.5em;
+    background: linear-gradient(
+        to bottom,
+        #58B028 0%,
+        #489028 50%,
+        #3a6827 51%,
+        #116d14 52%
+    );
+
+    box-shadow:
+        0 0 0 2px white,
+        0 0 0 4px gray;
+    border-radius: 2px;
+}
+
+#generateTeam:active {
+    background: linear-gradient(
+    to bottom,
+    #4e9e23 0%,
+    #3e7e23 50%,
+    #325821 51%,
+    #0c580f 52%
+);
+}
+
+#generateTeam:hover {
+    cursor: pointer;
+}
+
+#generatorAndPokedex {
+    display: flex;
+    width: 100vw;
+    height: 20em;
+}
+
+#pokedex {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    box-sizing: border-box;
 }

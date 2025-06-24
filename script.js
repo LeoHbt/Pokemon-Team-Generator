@@ -1,3 +1,5 @@
+let infosPokemons = []
+
 // récupère l'API pour générer un pokemin à partir d'un id et l'affiche dans la div voulue
 function afficherPokemon(pokemon, numeroEquipe) {
 fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon)
@@ -17,7 +19,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon)
     .catch(error => console.error(error))
 }
 
-// génère un nombre entre 1 et 1025 pour servir d'id de pokemon
+// return un nombre entre 1 et 1025 pour servir d'id de pokemon
 function randomId() {
     return Math.floor(Math.random() * 1025 + 1)
 }
@@ -26,5 +28,8 @@ function randomId() {
 document.getElementById('generateTeam').addEventListener('click', () => {
     for (let i = 1; i <= 6; i++) {
         afficherPokemon(randomId(), i.toString())
+        document.getElementById('pokemon' + i).addEventListener('click', () => {
+            document.getElementById('pokedexImg').src = document.getElementById('pokemon' + i).src
+        })
     }
 })
