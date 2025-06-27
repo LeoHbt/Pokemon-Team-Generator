@@ -25,10 +25,12 @@ fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon)
             document.getElementById('pokedexName').textContent = data.name
             let pokemonType1 = data.types[0].type.name
             let pokemonType2
-            document.getElementById('pokemonType1').src = /typesImages/ + pokemonType1 + '.png'
-            if (data.types[1].type.name !== undefined) {
+            document.getElementById('pokemonType1').src = 'typesImages/' + pokemonType1 + '.png'
+            if (data.types.length > 1) {
                 pokemonType2 = data.types[1].type.name
-                document.getElementById('pokemonType2').src = /typesImages/ + pokemonType2 + '.png'
+                document.getElementById('pokemonType2').src = 'typesImages/'+ pokemonType2 + '.png'
+            } else {
+                document.getElementById('pokemonType2').src = ''
             }
         }
     })
